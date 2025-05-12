@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ioronoz- <ioronoz-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/12 17:21:16 by ioronoz-          #+#    #+#             */
+/*   Updated: 2025/05/12 17:50:25 by ioronoz-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c)
@@ -23,8 +35,8 @@ static size_t	count_words(char const *s, char c)
 
 static char	*get_next_word(char const **s, char c)
 {
-	char	*word;
-	size_t	len;
+	char		*word;
+	size_t		len;
 	char const	*start;
 
 	while (**s == c && **s)

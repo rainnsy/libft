@@ -6,8 +6,11 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     unsigned char *ptr_dest;
     unsigned char *ptr_src;
 
-    if (dest == NULL || src == NULL)
-        return ;
+    if (dest == NULL && src == NULL)
+        return (NULL);
+    if (n == 0 || dest == src)
+        return (dest);
+
     i = 0;
     ptr_dest = (unsigned char *)dest;
     ptr_src = (unsigned char *)src;

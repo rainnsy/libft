@@ -2,18 +2,18 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-	int i;
-	char *last_ocurrence;
+	const char *last_occurrence;
+	size_t i;
+	size_t len;
 
+	last_occurrence = NULL;
+	len = ft_strlen(s);
 	i = 0;
-	last_ocurrence = 0;
-	while(*s != '\0')
+	while (i <= len)
 	{
-		if(s[i] == (char)c)
-			last_ocurrence = (char *)&s[i];
+		if (s[i] == (char)c)
+			last_occurrence = &s[i];
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	return (last_ocurrence);
+	return ((char *)last_occurrence);
 }
